@@ -18,7 +18,7 @@ class StreamingStop(ssc:StreamingContext) extends Runnable{
    */
   override def run(): Unit = {
     // 获取Hadoop文件系统实例，用于检查停止信号文件
-    val fs:FileSystem = FileSystem.get(new URL("hdfs://node2:9820"),new Configuration(),"root")
+    val fs:FileSystem = null//FileSystem.get(new URL("hdfs://node2:9820"),new Configuration(),"root")
 
     while (true) {
       // 尝试让线程休眠5秒，以便定期检查
